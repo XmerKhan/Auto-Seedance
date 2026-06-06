@@ -8,6 +8,9 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@/components/site/Analytics";
+
+const ADSENSE_CLIENT = import.meta.env.VITE_ADSENSE_CLIENT as string | undefined;
 
 import appCss from "../styles.css?url";
 
@@ -114,6 +117,14 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
+      <Analytics />
+      {ADSENSE_CLIENT ? (
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+          crossOrigin="anonymous"
+        />
+      ) : null}
       <Outlet />
       <Toaster richColors position="top-right" theme="dark" />
     </QueryClientProvider>
