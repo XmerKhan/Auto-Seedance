@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
-const BASE_URL = "https://vizio-automata.lovable.app";
+const BASE_URL = "https://autoseedance.lovable.app";
 
 interface SitemapEntry {
   path: string;

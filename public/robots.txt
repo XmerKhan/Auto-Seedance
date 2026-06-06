@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /workspace
+Disallow: /api/
+Disallow: /auth
 
-Sitemap: https://vizio-automata.lovable.app/sitemap.xml
+Sitemap: https://autoseedance.lovable.app/sitemap.xml
